@@ -148,7 +148,7 @@ local function launch_external_terminal(env, terminal, args)
     end
     if code ~= 0 then
       utils.notify(
-      string.format('Terminal exited %d running %s %s', code, terminal.command, table.concat(full_args, ' ')),
+        string.format('Terminal exited %d running %s %s', code, terminal.command, table.concat(full_args, ' ')),
         vim.log.levels.ERROR)
     end
   end)
@@ -957,7 +957,8 @@ do
       local payload = {
         source = {
           path = path,
-          name = vim.fn.fnamemodify(path, ':.')
+          name = 'test.ts'
+          --name = vim.fn.fnamemodify(path, ':.')
         },
         sourceModified = false,
         breakpoints = vim.tbl_map(
