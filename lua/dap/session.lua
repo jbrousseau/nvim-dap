@@ -957,8 +957,8 @@ do
       local payload = {
         source = {
           path = path,
-          name = 'test.ts'
-          --name = vim.fn.fnamemodify(path, ':.')
+          sourceReference = 0,
+          name = vim.fn.fnamemodify(path, ':.')
         },
         sourceModified = false,
         breakpoints = vim.tbl_map(
