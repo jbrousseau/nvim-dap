@@ -958,7 +958,8 @@ do
         source = {
           path = path,
           sourceReference = 0,
-          name = vim.fn.fnamemodify(path, ':.')
+          name = path
+         -- name = vim.fn.fnamemodify(path, ':.')
         },
         sourceModified = false,
         breakpoints = vim.tbl_map(
